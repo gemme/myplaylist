@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SongsComponent } from './songs/songs.component';
 
+import {SongService} from './songs/song.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,7 @@ import { SongsComponent } from './songs/songs.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [SongService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
