@@ -11,12 +11,16 @@ import { ArtistService } from './artists/artist.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing';
+import { ArtistDetailsComponent } from './artists/artist-details/artist-details.component';
+import { AlbumsComponent } from './artists/albums/albums.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SongsComponent,
-    ArtistsComponent
+    ArtistsComponent,
+    ArtistDetailsComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,

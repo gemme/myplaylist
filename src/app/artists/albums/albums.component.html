@@ -1,0 +1,10 @@
+<p>Albums de: {{artistName}}</p>
+<div>
+    <ul class="albums">
+        <li *ngFor="let album of albums">
+          <img *ngIf="album.image[1]['#text']" src="{{album.image[1]['#text']}}">
+          <a routerLink="{{album.name}}">{{album.name}}</a>
+        </li>
+      </ul>
+</div>
+
