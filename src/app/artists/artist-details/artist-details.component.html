@@ -1,0 +1,10 @@
+<div>
+  <span>Detalles sobre: {{artistName}}</span>
+</div>
+<div>
+  <a routerLink="albums">Ver albums</a>
+</div>
+
+<img src="{{artist.image[3]['#text']}}">
+<p [innerHTML]="artist.bio.summary"></p>
+<p [innerHTML]="artist.bio.content"></p>
