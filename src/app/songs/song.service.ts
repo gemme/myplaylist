@@ -8,6 +8,14 @@ type Track = {
   name: string,
   url: string,
 }
+
+type Response = {
+  results: {
+    trackmatches: {
+      track: Array<Track>
+    }
+  }
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +28,7 @@ export class SongService {
 
   searchSong(song) {
     const API_URL = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${song}&api_key=${this.API_KEY}&format=json`;
-    return this.http.get(API_URL)
+    return this.http.get<Response>(API_URL)
              .pipe(
                map(response => response.results.trackmatches.track)
               ).toPromise();
