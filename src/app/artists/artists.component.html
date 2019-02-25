@@ -1,0 +1,10 @@
+<h2>Artistas</h2>
+<form (submit)="getArtists()">
+  <input type="text" name="artist" [(ngModel)]="artist">
+  <button>Buscar</button>
+</form>
+<ul>
+  <li *ngFor="let artist of artists">
+    <a href="{{artist.url}}">{{artist.name}}</a>
+  </li>
+</ul>

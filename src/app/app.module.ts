@@ -4,22 +4,27 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SongsComponent } from './songs/songs.component';
+import { ArtistsComponent } from './artists/artists.component';
 
-import {SongService} from './songs/song.service';
+import { SongService } from './songs/song.service';
+import { ArtistService } from './artists/artist.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongsComponent
+    SongsComponent,
+    ArtistsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    routing
   ],
-  providers: [SongService],
+  providers: [SongService, ArtistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
