@@ -5,6 +5,6 @@
   <a routerLink="albums">Ver albums</a>
 </div>
 
-<img src="{{artist.image[3]['#text']}}">
-<p [innerHTML]="artist.bio.summary"></p>
-<p [innerHTML]="artist.bio.content"></p>
+<img src="{{artist?.image[3]['#text']}}">
+<p [innerHTML]="artist?.bio.summary"></p>
+<p [innerHTML]="artist?.bio.content"></p>
