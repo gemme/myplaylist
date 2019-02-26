@@ -17,6 +17,7 @@ export class AlbumsComponent implements OnInit,OnDestroy {
   private subscription: Subscription = null;
   private artistName: string = null;
   public albums:Array<Album> = null;
+  public error: string = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,7 +38,11 @@ export class AlbumsComponent implements OnInit,OnDestroy {
   getAlbums(artist) {
     this.albumService
       .getAlbums(artist)
-      .then((response: Array<Album>) => this.albums = response);
+      .then((response: Array<Album>) => this.albums = response)
+      .catch(error => {
+        console.error('getAlbums:error', error);
+        this.error = error;
+      });
   }
 
 }

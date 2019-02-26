@@ -1,7 +1,13 @@
 <h2>Artistas</h2>
 <form (submit)="getArtists()">
-  <input type="text" name="artist" [(ngModel)]="artist">
-  <button>Buscar</button>
+  <div class="form-group row">
+      <div class="col-md-4">
+          <input class="form-control" type="text" name="artist" [(ngModel)]="artist">
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary">Buscar</button>
+      </div>
+  </div>
 </form>
 <ul>
   <li *ngFor="let artist of artists">
