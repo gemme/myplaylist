@@ -15,7 +15,7 @@ type Album = {
 export class AlbumsComponent implements OnInit,OnDestroy {
 
   private subscription: Subscription = null;
-  private artistName: string = null;
+  public artistName: string = null;
   public albums:Array<Album> = null;
   public error: string = null;
 
