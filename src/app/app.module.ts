@@ -14,6 +14,8 @@ import { routing } from './app.routing';
 import { ArtistDetailsComponent } from './artists/artist-details/artist-details.component';
 import { AlbumsComponent } from './artists/albums/albums.component';
 
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { AlbumsComponent } from './artists/albums/albums.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing
+    routing,
+    NgbDropdownModule.forRoot()
   ],
   providers: [SongService, ArtistService],
   bootstrap: [AppComponent]
