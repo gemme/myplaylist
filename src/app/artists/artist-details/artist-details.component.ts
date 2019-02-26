@@ -8,7 +8,11 @@ type Response = {
 };
 
 type Artist = {
-
+  image: Array<any>,
+  bio: {
+    summary: string,
+    content: string
+  },
 }
 
 @Component({
